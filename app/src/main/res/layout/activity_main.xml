@@ -28,6 +28,7 @@
         android:layout_marginTop="20dp"
         android:background="#000"
         android:textColor="#fff"
+        android:onClick="EnterApp"
         android:text="ENTER APP"
         android:layout_height="wrap_content" />
 
