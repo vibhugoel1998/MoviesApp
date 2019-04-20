@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".OpeningActivity" />
-        <activity android:name=".ViewAllActivity"></activity>
+        <activity android:name=".ViewAllActivity" />
+        <activity android:name=".NowPlayingMovieDetails"></activity>
     </application>
 
 </manifest>
