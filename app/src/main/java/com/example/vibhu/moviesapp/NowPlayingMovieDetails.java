@@ -47,6 +47,9 @@ public class NowPlayingMovieDetails extends AppCompatActivity {
     ProductionAdapter productionAdapter;
     ArrayList<ProductionHeirarchy.productionBean> productionArrayList;
     ArrayList<Integer> cast_id_array;
+    RecyclerView videosView;
+    VideoAdapter videoAdapter;
+    ArrayList<VideoHeirarchy.VideoBean> videos;
     Button button;
     String title;
     String backdrop;
