@@ -7,6 +7,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -149,5 +150,26 @@ public class OpeningActivity extends AppCompatActivity {
                 Toast.makeText(OpeningActivity.this, "TRY AGain", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void ViewAll1(View view){
+        Intent intent=new Intent(this,ViewAllActivity.class);
+        intent.putExtra("nowplaying",1);
+        intent.putExtra("newstring","Now Showing");
+        startActivity(intent);
+
+    }
+    public void ViewAll2(View view){
+        Intent intent=new Intent(this,ViewAllActivity.class);
+        intent.putExtra("popular",2);
+        intent.putExtra("newstring","Popular");
+        startActivity(intent);
+    }
+    public void ViewAll3(View view){
+        Intent intent=new Intent(this,ViewAllActivity.class);
+        intent.putExtra("toprated",1);
+        intent.putExtra("newstring","Top Rated");
+        startActivity(intent);
+
     }
 }

@@ -29,6 +29,7 @@
                 android:background="#D3D3D3"
                 android:textColor="#800080"
                 android:text="View All"
+                android:onClick="ViewAll1"
                 android:layout_height="match_parent" />
         </LinearLayout>
         <android.support.v7.widget.RecyclerView
@@ -53,6 +54,7 @@
                 android:background="#D3D3D3"
                 android:textColor="#800080"
                 android:text="View All"
+                android:onClick="ViewAll2"
                 android:layout_height="match_parent" />
         </LinearLayout>
         <android.support.v7.widget.RecyclerView
@@ -76,6 +78,7 @@
                 android:layout_width="100dp"
                 android:textColor="#800080"
                 android:background="#D3D3D3"
+                android:onClick="ViewAll3"
                 android:text="View All"
                 android:layout_height="match_parent" />
         </LinearLayout>

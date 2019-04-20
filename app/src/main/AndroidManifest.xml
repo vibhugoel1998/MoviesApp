@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OpeningActivity"></activity>
+        <activity android:name=".OpeningActivity" />
+        <activity android:name=".ViewAllActivity"></activity>
     </application>
 
 </manifest>
