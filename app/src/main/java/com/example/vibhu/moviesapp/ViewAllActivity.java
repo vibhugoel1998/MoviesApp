@@ -39,12 +39,38 @@ public class ViewAllActivity extends AppCompatActivity {
         usesRecyclerAdapter=new UsesRecyclerAdapter(users, this, new UsesRecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
+                Intent intent=new Intent(ViewAllActivity.this,NowPlayingMovieDetails.class);
+                NowPlayingHeirarchy.ResultsBean getObj=users.get(position);
+                String title=getObj.getTitle();
+                intent.putExtra("title",title);
+                String PosterPath=getObj.getPoster_path();
+                intent.putExtra("posterpath",PosterPath);
+                String description=getObj.getOverview();
+                intent.putExtra("overview",description);
+                intent.putExtra("release",getObj.getRelease_date());
+                intent.putExtra("id",getObj.getId());
+                intent.putExtra("voteavg",getObj.getVote_average()+"");
+                Log.d("check1",getObj.getVote_average()+"");
+                startActivity(intent);
 
             }
         });
         usesRecyclerAdapter2=new UsesRecyclerAdapter2(users2, this, new UsesRecyclerAdapter2.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
+                Intent intent=new Intent(ViewAllActivity.this,NowPlayingMovieDetails.class);
+                PopularHeirarchy.ResultsBean getObj=users2.get(position);
+                String title=getObj.getTitle();
+                intent.putExtra("title",title);
+                String PosterPath=getObj.getPoster_path();
+                intent.putExtra("posterpath",PosterPath);
+                String description=getObj.getOverview();
+                intent.putExtra("overview",description);
+                intent.putExtra("release",getObj.getRelease_date());
+                intent.putExtra("id",getObj.getId());
+                intent.putExtra("voteavg",getObj.getVote_average()+"");
+                Log.d("check1",getObj.getVote_average()+"");
+                startActivity(intent);
 
 
             }
@@ -52,6 +78,19 @@ public class ViewAllActivity extends AppCompatActivity {
         usesRecyclerAdapter3=new UsesRecyclerAdapter3(users3, this, new UsesRecyclerAdapter3.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
+                Intent intent=new Intent(ViewAllActivity.this,NowPlayingMovieDetails.class);
+                TopRatedHeirarchy.ResultsBean getObj=users3.get(position);
+                String title=getObj.getTitle();
+                intent.putExtra("title",title);
+                String PosterPath=getObj.getPoster_path();
+                intent.putExtra("posterpath",PosterPath);
+                String description=getObj.getOverview();
+                intent.putExtra("overview",description);
+                intent.putExtra("release",getObj.getRelease_date());
+                intent.putExtra("id",getObj.getId());
+                intent.putExtra("voteavg",getObj.getVote_average()+"");
+                Log.d("check1",getObj.getVote_average()+"");
+                startActivity(intent);
 
             }
         });
