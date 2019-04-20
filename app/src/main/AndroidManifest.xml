@@ -20,7 +20,10 @@
         </activity>
         <activity android:name=".OpeningActivity" />
         <activity android:name=".ViewAllActivity" />
-        <activity android:name=".NowPlayingMovieDetails"></activity>
+        <activity
+            android:name=".NowPlayingMovieDetails"
+            android:label="@string/title_activity_now_playing_movie_details"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
