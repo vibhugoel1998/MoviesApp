@@ -100,7 +100,9 @@ public class NowPlayingMovieDetails extends AppCompatActivity {
         castadapter=new castAdapter(arrayList, this, new castAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-
+                Intent intent1=new Intent(NowPlayingMovieDetails.this,CastInfo.class);
+                intent1.putExtra("castid1",cast_id_array.get(position));
+                startActivity(intent1);
             }
         });
         castView.setAdapter(castadapter);

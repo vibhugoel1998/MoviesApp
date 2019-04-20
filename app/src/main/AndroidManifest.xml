@@ -28,7 +28,8 @@
             android:name=".VideoPlaying"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_video_playing"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".CastInfo"></activity>
     </application>
 
 </manifest>
