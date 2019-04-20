@@ -26,7 +26,6 @@
                 android:background="#D3D3D3"
                 android:textColor="#800080"
                 android:text="View All"
-                android:onClick="ViewAll1"
                 android:layout_height="match_parent" />
         </LinearLayout>
         <android.support.v7.widget.RecyclerView
