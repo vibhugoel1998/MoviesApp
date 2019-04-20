@@ -129,6 +129,19 @@ public class NowPlayingMovieDetails extends AppCompatActivity {
         ProductionView.setAdapter(productionAdapter);
         ProductionView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         ProductionView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.HORIZONTAL));
+        videosView=findViewById(R.id.TrailerRecyclerView);
+        videos=new ArrayList<>();
+        videoAdapter=new VideoAdapter(videos, this, new VideoAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent1=new Intent(NowPlayingMovieDetails.this,VideoPlaying.class);
+                intent1.putExtra("keyofvideo",videos.get(position).getKey());
+                startActivity(intent1);
+            }
+        });
+        videosView.setAdapter(videoAdapter);
+        videosView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
+        videosView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.HORIZONTAL));
         button=findViewById(R.id.button);
         SharedPreferences sharedPreferences=getSharedPreferences("fav",MODE_PRIVATE);
         String check=sharedPreferences.getString(title,"");
@@ -152,6 +165,29 @@ public class NowPlayingMovieDetails extends AppCompatActivity {
     }
 
     private void fetchVideos(int id) {
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl("https://api.themoviedb.org/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        CustomApi customApi=retrofit.create(CustomApi.class);
+        Call<VideoHeirarchy> call=customApi.getVideos(id);
+        call.enqueue(new Callback<VideoHeirarchy>() {
+            @Override
+            public void onResponse(Call<VideoHeirarchy> call, Response<VideoHeirarchy> response) {
+                VideoHeirarchy newObj=response.body();
+                if(response!=null)
+                {
+                    videos.addAll(newObj.getResults());
+                }
+                videoAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onFailure(Call<VideoHeirarchy> call, Throwable t) {
+                Toast.makeText(NowPlayingMovieDetails.this, "Try Again", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
     }
 

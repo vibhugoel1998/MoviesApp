@@ -24,4 +24,8 @@ public interface CustomApi {
 
     @GET("3/movie/{id}?api_key=c66dc50c8923e950de5657fe61428b4d&language=en-US")
     Call<ProductionHeirarchy> getProduction(@Path("id") int id);
+
+    @GET("3/movie/{id}/videos?api_key=c66dc50c8923e950de5657fe61428b4d&language=en-US")
+    Call<VideoHeirarchy> getVideos(@Path("id") int id);
+
 }

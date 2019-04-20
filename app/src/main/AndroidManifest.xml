@@ -23,7 +23,12 @@
         <activity
             android:name=".NowPlayingMovieDetails"
             android:label="@string/title_activity_now_playing_movie_details"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".VideoPlaying"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_video_playing"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>

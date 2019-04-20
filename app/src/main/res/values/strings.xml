@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Movies App</string>
     <string name="title_activity_now_playing_movie_details">NowPlayingMovieDetails</string>
+
+    <string name="title_activity_video_playing">VideoPlaying</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
