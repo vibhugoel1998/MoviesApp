@@ -50,7 +50,6 @@ public class CastInfo extends AppCompatActivity {
         listView.setAdapter(arrayAdapter);
         AlsoKnown=findViewById(R.id.alsoknownas);
         birthplace=findViewById(R.id.personBirthPlace);
-
         Intent intent=getIntent();
         int id=intent.getIntExtra("castid1",-1);
         fetchInfo(id);
